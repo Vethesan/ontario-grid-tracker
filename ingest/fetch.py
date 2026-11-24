@@ -19,6 +19,7 @@ def report_filename(day: date) -> str:
 
 def fetch_report(day: date) -> bytes:
     url = f"{BASE_URL}/{report_filename(day)}"
+    print("Fetching", url)
     # Give up after 30 seconds, so a stuck website can't freeze the robot forever.
     resp = requests.get(url, timeout=30)
     resp.raise_for_status()  # Stop with an error if the download failed
