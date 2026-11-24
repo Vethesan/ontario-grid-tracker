@@ -1,0 +1,10 @@
+# Python toolbox and junk files
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets (passwords) - NEVER upload
+.env
+
+# Downloaded IESO files (big, can re-download)
+data/
